@@ -8,27 +8,55 @@ module.exports = async function (fastify, opts) {
   });
 
   fastify.get("/categories", async (request, reply) => {
-    reply.send([
-      {
-        id: "1",
-        cate_title: "ทั้งหมด",
+    reply.send({
+      categories: [
+        {
+          id: "1",
+          cate_title: "ทั้งหมด",
+        },
+        {
+          id: "2",
+          cate_title: "เว็บไซต์",
+        },
+        {
+          id: "3",
+          cate_title: "ผู้ใช้บริการ",
+        },
+        {
+          id: "4",
+          cate_title: "เจ้าหน้าที่",
+        },
+        {
+          id: "5",
+          cate_title: "Social",
+        },
+      ],
+      users: {
+        id: 12345,
+        username: "myuser",
       },
-      {
-        id: "2",
-        cate_title: "เว็บไซต์",
-      },
-      {
-        id: "3",
-        cate_title: "ผู้ใช้บริการ",
-      },
-      {
-        id: "4",
-        cate_title: "เจ้าหน้าที่",
-      },
-      {
-        id: "5",
-        cate_title: "Social",
-      },
-    ]);
+    });
+    // reply.send([
+    //   {
+    //     id: "1",
+    //     cate_title: "ทั้งหมด",
+    //   },
+    //   {
+    //     id: "2",
+    //     cate_title: "เว็บไซต์",
+    //   },
+    //   {
+    //     id: "3",
+    //     cate_title: "ผู้ใช้บริการ",
+    //   },
+    //   {
+    //     id: "4",
+    //     cate_title: "เจ้าหน้าที่",
+    //   },
+    //   {
+    //     id: "5",
+    //     cate_title: "Social",
+    //   },
+    // ]);
   });
 };
