@@ -6,4 +6,29 @@ module.exports = async function (fastify, opts) {
   fastify.get("/version", async (request, reply) => {
     return { build_version: 100 };
   });
+
+  fastify.get("/categories", async (request, reply) => {
+    reply.send(
+      {
+        id: "1",
+        cate_title: "ทั้งหมด",
+      },
+      {
+        id: "2",
+        cate_title: "เว็บไซต์",
+      },
+      {
+        id: "3",
+        cate_title: "ผู้ใช้บริการ",
+      },
+      {
+        id: "4",
+        cate_title: "เจ้าหน้าที่",
+      },
+      {
+        id: "5",
+        cate_title: "Social",
+      }
+    );
+  });
 };
