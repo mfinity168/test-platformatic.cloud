@@ -8,7 +8,7 @@ module.exports = async function (fastify, opts) {
   });
 
   fastify.get("/categories", async (request, reply) => {
-    reply.send(
+    reply.send([
       {
         id: "1",
         cate_title: "ทั้งหมด",
@@ -28,7 +28,7 @@ module.exports = async function (fastify, opts) {
       {
         id: "5",
         cate_title: "Social",
-      }
-    );
+      },
+    ]);
   });
 };
